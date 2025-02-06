@@ -31,4 +31,25 @@ body {
 // _partial.scss
 // @use / @import
 
+// Mixins
+@mixin transform_Me($prop1, $prop2) {
+    width: $prop1;
+    height: $prop2;
+
+    background-color: yellow;
+
+    -ms-transform: rotate(20deg) scale(1.5); // IE 9
+    -webkit-transform: rotate(20deg) scale(1.5); // Safari 3-8
+    transform: rotate(20deg) scale(1.5);
+}
+
+.transform {
+    @include transform_Me(400px, 500px);
+    font-size: 3rem;
+}
+
+.transform-2 {
+    @include transform_Me(200px, 300px);
+}
+
 // DRY
