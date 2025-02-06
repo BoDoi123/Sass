@@ -92,4 +92,28 @@ body {
     }
 }
 
+// Operators
+.header {
+    // addition
+    font-size: 4px + 2;
+
+    // subtraction
+    height: 80% - 5%;
+}
+
+.multi {
+    // multi
+    width: 20% * 5;
+
+    // division
+    height: (24px / 4);
+}
+
+p {
+    &:before {
+        content: "I am a string with " + quate;
+        font-family: cursive + "serif";
+    }
+}
+
 // DRY
