@@ -16,7 +16,13 @@ body {
     nav {
         ul {
             li {
-                font-size: 1rem;
+                &:nth-child(1) {
+                    font-size: 1rem;
+                }
+
+                &:nth-child(2) {
+                    font-size: 2rem;
+                }
             }
         }
 
@@ -72,6 +78,18 @@ body {
 .border1 {
     @extend %extend-border;
     margin: 20px;
+}
+
+// Pseudo Selector
+.element {
+    a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: white;
+        }
+    }
 }
 
 // DRY
